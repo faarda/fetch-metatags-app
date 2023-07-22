@@ -3,6 +3,7 @@ import { load } from "cheerio";
 import fetch from "node-fetch";
 
 export default async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   const url = req.query.url;
 
   try {
